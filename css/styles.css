@@ -45,6 +45,10 @@ header {
     clear: both;
 }
 
+.menuButton{
+    display:none;
+}
+
 .menu li:hover .submenu{
     display:block;
 }
@@ -90,4 +94,85 @@ aside .notice {
     display: grid;
     grid-template-columns: repeat(3, 32.6%);
     column-gap: 1%;
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        display:block; 
+    }
+    .container {
+        max-width: 90%;
+    }
+
+    .highlight .notice a {
+        display:block;
+        font-size: 1.5em;
+    }
+
+    .highlight .notice img {
+        margin-right: 0;
+    }
+    .notices {
+        display: block;
+
+    }
+
+    .notices .notice {
+        margin-bottom: 32px;
+    }
+    aside .notice{
+        padding-left: 0;
+    }
+    header div.container {
+        flex-direction: column;
+    }
+
+
+.submenu{
+    display: block;
+    width: 100%;
+    top: 100%;
+    position: relative;
+    border:none;
+}
+.menu {
+    display: none;
+}
+.menu > li {
+    clear:both;
+
+}
+
+
+.submenu li {
+    display:block;
+    padding: 8px;
+    list-style: none;
+}
+.menuButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+.menuButton button {
+    padding: 8px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .container{
+        max-width: 90%
+    }
+    .menuButton{
+        display:none;
+    }
+    .highlight .notice a {
+        font-size: 1.5em;
+
+    }
+    .notices {
+        grid-template-columns: repeat (2, 49%);
+    }
 }
